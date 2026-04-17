@@ -1,0 +1,89 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#brandTitle {
+  white-space: nowrap;
+}
+
+.badge-dead {
+  background: #ececec !important;
+  color: #cdcdcd !important;
+  border: 1px solid #ccc;
+}
+
+/* Pretty JSON blocks */
+.code-block {
+  background: #1f2933;
+  color: #e0f2f1;
+  padding: 12px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  font-size: 12px;
+}
+
+/* 3-column schema meta layout */
+.schema-meta-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px 20px;
+}
+
+/* Standard item styling */
+.schema-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Full-width flags row */
+.schema-meta-flags {
+  grid-column: 1 / 4;
+}
+
+#metaSchemaFlags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* Make description wrap sanely */
+#metaSchemaDescription {
+  white-space: normal;
+  word-break: break-word;
+}
+
+
+
+/* Toasts fully on screen */
+.toast-wrapper {
+  top: 10px;
+  right: 10px;
+  z-index: 2000;
+  max-width: 320px;
+  width: 100%;
+}
+
+.toast-container {
+  width: 100%;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .schema-meta-item {
+    min-width: 100%;
+  }
+  .toast-wrapper {
+    right: 10px;
+    left: 10px;
+    max-width: calc(100% - 20px);
+  }
+}
+
+.field-details-table{width:100%;font-size:11px;margin-top:4px;border-collapse:collapse;}
+.field-details-table td{border-bottom:1px solid #ddd;padding:2px 4px;}
+.field-details-table tr td:first-child{font-weight:bold;width:100px;}
